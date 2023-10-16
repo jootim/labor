@@ -16,9 +16,9 @@ app.use(cors())
 // Routes
 app.use("/api/product",productRoute)
 
-// app.get('/',(req,res)=>{
-//     throw new Error('Fake Error')
-// })
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname + "/index.html");
+})
 
 mongoose.connect(MONGO_URL).then(()=>{
 app.listen(PORT)    
