@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
+const path = require("path")
 const mongoose = require('mongoose')
 const productRoute = require('./routes/productRoute')
 const cors = require('cors')
@@ -17,7 +18,7 @@ app.use(cors())
 app.use("/api/product",productRoute)
 
 app.get('/main',(req,res)=>{
-    res.sendFile(__dirname + "pages/index.html");
+    res.sendFile(path.join(__dirname + '/pages/index.html'));
 })
 
 mongoose.connect(MONGO_URL).then(()=>{
