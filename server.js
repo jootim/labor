@@ -16,8 +16,8 @@ app.use(cors())
 // Routes
 app.use("/api/product",productRoute)
 
-app.get('/',(req,res)=>{
-    res.sendFile(__dirname + "/index.html");
+app.get('/main',(req,res)=>{
+    res.sendFile(__dirname + "pages/index.html");
 })
 
 mongoose.connect(MONGO_URL).then(()=>{
