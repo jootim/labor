@@ -2,17 +2,7 @@ const Product = require('../model/productModel')
 const asyncHandler = require('express-async-handler')
 
 
-// const mainPage = asyncHandler(async (req,res)=>{
-    
-// try {
-//     // const products = await Product.find({})
-//     // res.status(200).json(products)
-//     res.sendFile(__dirname + "/index.html");
-// } catch (error) {
-//     res.status(500)
-//     throw new Error(error.message)
-// }
-// })
+// git status
 
 const getProducts = asyncHandler(async (req,res)=>{
     
