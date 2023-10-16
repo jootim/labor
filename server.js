@@ -8,6 +8,7 @@ const errorMiddlewares = require('./middleware/errorMiddleware')
 const MONGO_URL = process.env.MONGO_URL
 const PORT = process.env.PORT
 
+app.use(express.static(__dirname));
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(errorMiddlewares)
