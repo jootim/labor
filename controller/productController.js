@@ -58,5 +58,5 @@ const deleteProduct = asyncHandler(async (req,res)=>{
 
 
 module.exports = {
-    getProducts,getSingleProduct,updateProduct,deleteProduct,mainPage
+    getProducts,getSingleProduct,updateProduct,deleteProduct
 }
